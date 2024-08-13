@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Estudiantes registrados</h1>
+    {% for x in lista_estudiantes %}
+        <p>Rut: {{x.rut}} - Nombre: {{x.nombre}} - Genero: {{x.genero}}</p>
+    {% endfor %}
+</body>
+</html>

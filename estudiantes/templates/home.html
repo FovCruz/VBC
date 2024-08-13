@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Bienvenido al HOME</h1>
+    <p><b>Fecha:</b> {{ contexto.fecha }}</p>
+    <p><b>¿Usuario activo?:</b> {{ contexto.valido }}</p>
+
+    {% if contexto.valido %}
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/77/Yes.png" alt="" width="200">
+    {% else %}
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/No_sign.svg" alt="" width="200">
+    {% endif %}
+
+    <ul>
+        {% for x in contexto.nombres %}
+            <li>{{x}}</li>
+        {% endfor %}
+    </ul>
+</body> 
+</html>
