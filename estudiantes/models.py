@@ -1,6 +1,8 @@
 from django.db import models
 
 # Create your models here.
+
+#MODELO GESTION DE TAREAS
 class Estudiante(models.Model):
     genero_opciones = [
         ('M', 'Masculino'),
@@ -15,3 +17,4 @@ class Estudiante(models.Model):
 
     def __str__(self) -> str:
         return self.nombre
+    

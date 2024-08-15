@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if form.instance.pk %}Editar Tarea{% else %}Nueva Tarea{% endif %}</title>
+</head>
+<body>
+    <h1>{% if form.instance.pk %}Editar Tarea{% else %}Nueva Tarea{% endif %}</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">{% if form.instance.pk %}Guardar cambios{% else %}Crear tarea{% endif %}</button>
+    </form>
+    <a href="{% url 'lista_tareas' %}">Volver a la lista de tareas</a>
+</body>
+</html>

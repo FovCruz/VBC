@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "estudiantes",
+    "gestion_tareas",
+
 ]
 
 MIDDLEWARE = [
@@ -74,10 +76,15 @@ WSGI_APPLICATION = "proyecto.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'bd_vistas',  # Nombre de tu base de datos
+        'USER': 'postgres',  # El usuario de la base de datos
+        'PASSWORD': '123456',  # La contraseña del usuario
+        'HOST': 'localhost',
+        'PORT': '5432',  # El puerto de PostgreSQL, el valor por defecto es 5432
     }
 }
 
